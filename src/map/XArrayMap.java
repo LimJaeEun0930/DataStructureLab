@@ -111,12 +111,12 @@ public class XArrayMap<K, V> implements XMap<K, V> {
 
     @Override
     public Set<V> values() {
-        Set<V> keySet = new HashSet<>();
+        Set<V> valueSet = new HashSet<>();
         for (Entry<K, V> entry : entries) {
             if (entry != null) { // null 체크 필요
-                keySet.add(entry.getValue());
+                valueSet.add(entry.getValue());
             }
         }
-        return keySet;
+        return valueSet;
     }
 }
